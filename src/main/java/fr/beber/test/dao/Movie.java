@@ -1,11 +1,17 @@
 package fr.beber.test.dao;
 
-//START SNIPPET: code
-
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+/**
+ *
+ * Class faisant référence à la table movie sur mariaDB.
+ *
+ * @author BLafage
+ * @date 20/06/2014
+ */
 @Entity
 public class Movie {
 
@@ -13,8 +19,11 @@ public class Movie {
     @GeneratedValue
     private long id;
 
+    @Column(name = "director")
     private String director;
+    @Column(name = "title")
     private String title;
+    @Column(name = "year")
     private int year;
 
     public Movie() {
