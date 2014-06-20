@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="1.0">
+    <persistence-unit name="movie-unit">
+        <jta-data-source>java:openejb/Resource/movieDatabase</jta-data-source>
+        <non-jta-data-source>java:openejb/Resource/movieDatabaseUnmanaged</non-jta-data-source>
+        <class>fr.beber.test.dao.Movie</class>
+
+        <properties>
+            <property name="openjpa.jdbc.SynchronizeMappings" value="buildSchema(ForeignKeys=true)"/>
+            <property name="JdbcDriver" value="com.mysql.jdbc.Driver"/>
+            <property name="JdbcUrl" value="jdbc:mysql://localhost:3306/moviedatabase"/>
+            <property name="UserName" value="root"/>
+            <property name="Password" value=""/>
+        </properties>
+    </persistence-unit>
+</persistence>
