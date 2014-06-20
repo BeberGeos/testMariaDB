@@ -1,4 +1,4 @@
 testMariaDB
 ===========
 
-Permet de faire une test avec mariaDB, @PersistenceContext et JTA.
+Permet de faire un test avec mariaDB, @PersistenceContext et JTA.
